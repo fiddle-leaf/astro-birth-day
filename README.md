@@ -5,6 +5,6 @@
     width="25%">
 This is my Module 2: React.js project that gets user birth date, location, and time and fetches birth chart, weather, and moon-phase data.
 
-# Technologies Used
+## Technologies Used
 * [React.js](https://react.dev/), [Redux.js](https://redux.js.org/), [Sass](https://sass-lang.com/), HTML/CSS5
 * [Catpaw](https://giphy.com/catpaw) gif from Giphy.
