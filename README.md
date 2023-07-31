@@ -1,6 +1,6 @@
 # Astro Birth Day 
 <img align="left"
-    src="https://media2.giphy.com/media/QWRTFvymri1XABdEFA/giphy.gif?cid=ecf05e472037bj7a9gpg7n224w7akcmln4nroyjo99npve7k&ep=v1_stickers_search&rid=giphy.gif"
+    src="https://media0.giphy.com/media/aT8qmIcoyPQ1EeB9DK/giphy.gif?cid=ecf05e47rt9d87w19d9i0o3qgbf4bl79r37ymix5uyhreelz&ep=v1_stickers_search&rid=giphy.gif"
     alt="Pusheen (grey kitty) on laptop keyboard"
     width="25%">
 This is my Module 2: React.js project that gets user birth date, location, and time and fetches birth chart, weather, and moon-phase data.
