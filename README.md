@@ -7,3 +7,4 @@ This is my Module 2: React.js project that gets user birth date, location, and t
 
 # Technologies Used
 * [React.js](https://react.dev/), [Redux.js](https://redux.js.org/), [Sass](https://sass-lang.com/), HTML/CSS5
+* [Catpaw](https://giphy.com/catpaw) gif from Giphy.
