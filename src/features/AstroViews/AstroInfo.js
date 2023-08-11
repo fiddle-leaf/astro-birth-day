@@ -1,13 +1,13 @@
 import AstroForm from "./AstroForm";
 import AstroView from "./AstroView";
 import { useSelector } from "react-redux";
-import { setInfo, selectData, locationAsync } from "../info/infoSlice";
+import { setInfo, selectInfo, locationAsync } from "../info/infoSlice";
 import "./astroviews.sass";
 
 export default function AstroInfo() {
-  const info = useSelector(selectData);
+  const info = useSelector(selectInfo);
 
-  console.log(info);
+  //console.log(info);
 
   return (
     <main className="astro-page">

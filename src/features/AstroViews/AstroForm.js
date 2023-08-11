@@ -9,7 +9,7 @@ export default function AstroForm({ info, setInfo, location }) {
     location: "",
   });
 
-  console.log(data, info);
+  //console.log(data, info);
 
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -19,15 +19,9 @@ export default function AstroForm({ info, setInfo, location }) {
     const dataList = Object.keys(data);
 
     for (let item of dataList) {
-      switch (item) {
-        case "location":
-        case "birthdate":
-          dispatch(location(data));
-          break;
-
-        default:
-          dispatch(setInfo(data));
-      }
+      item === "location" || item === "birthdate"
+        ? dispatch(location(data))
+        : dispatch(setInfo(data));
     }
   };
 
@@ -42,6 +36,7 @@ export default function AstroForm({ info, setInfo, location }) {
             id="name"
             onChange={handleChange}
             value={data.name}
+            placeholder="Naar Selene"
           ></input>
         </div>
         <div>
@@ -62,6 +57,7 @@ export default function AstroForm({ info, setInfo, location }) {
             id="location"
             onChange={handleChange}
             value={data.location}
+            placeholder="City, State, Country"
           ></input>
         </div>
         <button type="button" onClick={handleClick}>

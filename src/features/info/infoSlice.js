@@ -2,16 +2,16 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { fetchLocation } from "./infoAPI";
 
 const initialState = {
+  user: {},
   data: {},
   status: "idle", //finite states
-  error: "" | null,
 };
 
 //location Async from input
 
 //moonphase Async from birthdate
 export const locationAsync = createAsyncThunk(
-  "info/fetchMoon",
+  "info/fetchLocation",
   async (info) => {
     const location = info.location.split(",").join("%20");
     const datetime = info.birthdate.split("T");
@@ -41,7 +41,7 @@ export const infoSlice = createSlice({
   initialState,
   reducers: {
     setInfo: (state, action) => {
-      state.data = action.payload;
+      state.info = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -61,6 +61,6 @@ export const infoSlice = createSlice({
 
 export const { setInfo } = infoSlice.actions;
 
-export const selectData = (state) => state.info;
+export const selectInfo = (state) => state.info;
 
 export default infoSlice.reducer;

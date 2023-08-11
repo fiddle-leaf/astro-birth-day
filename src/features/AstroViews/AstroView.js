@@ -1,18 +1,21 @@
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-export default function AstroView({ status }) {
+export default function AstroView({ info }) {
+  console.log(info);
   return (
     <article>
       <h2 className="subtitle">
-        {status === "loading" && <Skeleton />}
-        {status === "success" && "Astrology Breakdown"}
+        {info.status === "loading" && <Skeleton />}
+        {info.status === "success" && "Breakdown"}
       </h2>
-      {status === "loading" && <Skeleton count={10} />}
-      {status === "success" && 
-      <article>
-        
-        </article>}
+      {info.status === "loading" && <Skeleton count={10} />}
+      {info.status === "success" && (
+        <article>
+          <h3>{info.user.name}</h3>
+          <p>Birthday: {info.user.birthdate}</p>
+        </article>
+      )}
     </article>
   );
 }
