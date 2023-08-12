@@ -4,9 +4,9 @@ import { useDispatch } from "react-redux";
 export default function AstroForm({ info, setInfo, location }) {
   const dispatch = useDispatch();
   const [data, setData] = useState({
-    name: "",
-    birthdate: "",
-    location: "",
+    name: "Matthew",
+    birthdate: "01-13-2023",
+    location: "Salt Lake City, UT",
   });
 
   //console.log(data, info);
@@ -27,9 +27,9 @@ export default function AstroForm({ info, setInfo, location }) {
 
   return (
     <article>
-      <form id="astro-form">
+      <form class="astro-form">
         <div>
-          <label>Enter name:</label>
+          <label>Enter name</label>
           <input
             type="text"
             name="name"
@@ -40,7 +40,7 @@ export default function AstroForm({ info, setInfo, location }) {
           ></input>
         </div>
         <div>
-          <label>Birth Date and Time:</label>
+          <label>Birth Date and Time</label>
           <input
             type="datetime-local"
             name="birthdate"
@@ -50,7 +50,7 @@ export default function AstroForm({ info, setInfo, location }) {
           ></input>
         </div>
         <div>
-          <label>Birth Location:</label>
+          <label>Birth Location</label>
           <input
             type="text"
             name="location"
@@ -60,9 +60,12 @@ export default function AstroForm({ info, setInfo, location }) {
             placeholder="City, State, Country"
           ></input>
         </div>
-        <button type="button" onClick={handleClick}>
-          Enter
-        </button>
+        <div id="buttons">
+          <button type="button" onClick={handleClick}>
+            Enter
+          </button>
+          <button type="reset">Reset</button>
+        </div>
       </form>
     </article>
   );

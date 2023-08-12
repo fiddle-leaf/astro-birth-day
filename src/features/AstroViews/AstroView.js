@@ -1,5 +1,6 @@
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import AstroData from "./AstroData";
 
 export default function AstroView({ info }) {
   console.log(info);
@@ -7,15 +8,10 @@ export default function AstroView({ info }) {
     <article>
       <h2 className="subtitle">
         {info.status === "loading" && <Skeleton />}
-        {info.status === "success" && "Breakdown"}
+        {info.status === "success" && `${info.user.name}'s Breakdown`}
       </h2>
       {info.status === "loading" && <Skeleton count={10} />}
-      {info.status === "success" && (
-        <article>
-          <h3>{info.user.name}</h3>
-          <p>Birthday: {info.user.birthdate}</p>
-        </article>
-      )}
+      {info.status === "success" && <AstroData user={info} />}
     </article>
   );
 }

@@ -1,8 +1,28 @@
-@import 'https://fonts.googleapis.com/css2?family=Forum&family=Mirza:wght@400;500;600;700&display=swap'
 
 .flex
     display: flex
 
-.subtitle
-    font-family: 'Forum', cursive
-    font-size: 2em
+form.astro-form,
+article.astro-data
+    @extend .flex
+
+form.astro-form
+    flex-flow: row wrap
+    gap: 1rem
+
+    div
+        flex: 20%
+        display: grid
+        grid-template-rows: repeat(2, 1fr)
+
+        label
+            font-weight: 900
+
+        input
+            font-size: 1rem
+            line-height: 150%
+
+div#buttons
+    grid-template-columns: repeat(4, 1fr)
+    gap: 1.5rem
+    flex: 0 100%

@@ -41,7 +41,7 @@ export const infoSlice = createSlice({
   initialState,
   reducers: {
     setInfo: (state, action) => {
-      state.info = action.payload;
+      state.user = action.payload;
     },
   },
   extraReducers: (builder) => {
