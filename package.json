@@ -1,6 +1,7 @@
 {
   "name": "astrology-page",
   "version": "0.1.0",
+  "homepage": "https://fiddle-leaf.github.io/astro-birth-day/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
