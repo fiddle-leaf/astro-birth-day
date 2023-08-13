@@ -1,4 +1,4 @@
-import DataList from "./DataList";
+import Forecast from "./Forecast";
 
 const months = [
   "January",
@@ -17,18 +17,25 @@ const months = [
 
 export default function AstroData({ user }) {
   const name = user.user.name;
+  const date = new Date(user.user.birthdate);
   //const birthday = user.user.birthdate;
-  const astrology = user.data.astronomy.astro;
+  const forecast = user.data.forecast.forecastday[0];
+  const astrology = forecast.astro;
+  const dayForecast = forecast.day;
   const location = user.data.location;
 
-  const User = Object.assign({}, { name, astrology, location });
-
-  console.log(User);
+  console.log(date.toDateString());
 
   return (
     <article className="astro-data">
-      <DataList data={User.astrology} />
-      <DataList data={User.location} />
+      <p className="forecast">
+        {date.toDateString()}
+        <br />
+        {date.toLocaleTimeString()}
+        <br />
+        Timezone: {location.tz_id}
+      </p>
+      <Forecast data={dayForecast} location={location} />
     </article>
   );
 }

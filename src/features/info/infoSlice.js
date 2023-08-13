@@ -18,7 +18,7 @@ export const locationAsync = createAsyncThunk(
     console.log(datetime);
     const apiKey = "61cbd6e17eaa421db1f62842231108";
 
-    const url = `https://api.weatherapi.com/v1/astronomy.json?&key=${apiKey}&q=${location}&dt=${datetime[0]}`;
+    const url = `https://api.weatherapi.com/v1/history.json?&key=${apiKey}&q=${location}&dt=${datetime[0]}`;
 
     const options = {
       method: "GET",

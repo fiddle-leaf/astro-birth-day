@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1 className="page-title">Astrology Birthday</h1>
+        <h1 className="page-title">Astrology Birthday Report</h1>
         <p>
           A landing page for astrology and weather information for your 2023
           birthday!

@@ -27,7 +27,7 @@ export default function AstroForm({ info, setInfo, location }) {
 
   return (
     <article>
-      <form class="astro-form">
+      <form className="astro-form">
         <div>
           <label>Enter name</label>
           <input
