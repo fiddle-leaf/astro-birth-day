@@ -43,6 +43,9 @@ export const infoSlice = createSlice({
     setInfo: (state, action) => {
       state.user = action.payload;
     },
+    setStatus: (state) => {
+      state.status = "idle";
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -59,7 +62,7 @@ export const infoSlice = createSlice({
   },
 });
 
-export const { setInfo } = infoSlice.actions;
+export const { setInfo, setStatus } = infoSlice.actions;
 
 export const selectInfo = (state) => state.info;
 

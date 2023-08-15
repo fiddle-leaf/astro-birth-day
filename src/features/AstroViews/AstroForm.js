@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
-export default function AstroForm({ info, setInfo, location }) {
-  const dispatch = useDispatch();
+export default function AstroForm({ setInfo, location, dispatch }) {
   const [data, setData] = useState({
-    name: "Matthew",
-    birthdate: "01-13-2023",
-    location: "Salt Lake City, UT",
+    name: "",
+    birthdate: "",
+    location: "",
   });
 
-  //console.log(data, info);
+  console.log(data);
 
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -64,7 +63,12 @@ export default function AstroForm({ info, setInfo, location }) {
           <button type="button" onClick={handleClick}>
             Enter
           </button>
-          <button type="reset">Reset</button>
+          <button
+            type="reset"
+            onClick={() => setData({ name: "", birthdate: "", location: "" })}
+          >
+            Reset
+          </button>
         </div>
       </form>
     </article>

@@ -1,18 +1,29 @@
 import AstroForm from "./AstroForm";
 import AstroView from "./AstroView";
-import { useSelector } from "react-redux";
+import Skeleton from "react-loading-skeleton";
+import { useDispatch, useSelector } from "react-redux";
 import { setInfo, selectInfo, locationAsync } from "../info/infoSlice";
 import "./astroviews.sass";
 
-export default function AstroInfo() {
-  const info = useSelector(selectInfo);
-
-  //console.log(info);
+export default function AstroInfo({ status }) {
+  const dispatch = useDispatch();
+  console.log(status);
 
   return (
     <main className="astro-page">
-      <AstroForm info={info} setInfo={setInfo} location={locationAsync} />
-      <AstroView info={info} />
+      {status === "idle" ? (
+        <AstroForm
+          setInfo={setInfo}
+          location={locationAsync}
+          dispatch={dispatch}
+        />
+      ) : status === "loading" ? (
+        <Skeleton count={20} />
+      ) : status === "success" ? (
+        <AstroView dispatch={dispatch} />
+      ) : (
+        <h5>Error!</h5>
+      )}
     </main>
   );
 }
