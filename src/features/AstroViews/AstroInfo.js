@@ -1,8 +1,8 @@
 import AstroForm from "./AstroForm";
 import AstroView from "./AstroView";
 import Skeleton from "react-loading-skeleton";
-import { useDispatch, useSelector } from "react-redux";
-import { setInfo, selectInfo, locationAsync } from "../info/infoSlice";
+import { useDispatch } from "react-redux";
+import { setInfo, locationAsync } from "../info/infoSlice";
 import "./astroviews.sass";
 
 export default function AstroInfo({ status }) {

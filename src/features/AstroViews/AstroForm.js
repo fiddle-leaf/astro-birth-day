@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 
 export default function AstroForm({ setInfo, location, dispatch }) {
   const [data, setData] = useState({

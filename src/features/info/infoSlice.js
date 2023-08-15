@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { fetchLocation } from "./infoAPI";
 
 const initialState = {
   user: {},

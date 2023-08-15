@@ -2,7 +2,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import * as unicodeEmoji from "unicode-emoji";
 import { selectInfo, setStatus } from "../info/infoSlice";
 import { useSelector } from "react-redux";
-import { useState } from "react";
+//import { useState } from "react";
 import Forecast from "./Forecast";
 import MoonData from "./MoonData";
 
@@ -12,7 +12,7 @@ const user = (state) => {
 
 export default function AstroView({ dispatch }) {
   const info = useSelector(selectInfo);
-  const [users, setUsers] = useState([]);
+  //const [users, setUsers] = useState([]);
   let birthday = new Date(info.user.birthdate);
 
   console.log(info);
