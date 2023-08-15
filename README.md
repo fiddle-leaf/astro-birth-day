@@ -14,9 +14,9 @@ Module 2: React.js project that gets user birth date/time and location and fetch
 - [Weather API](https://www.weatherapi.com/) fetches forecast and moonphase information.
 - [Unicode Emoji](https://github.com/julien-marcou/unicode-emoji) grabs Moon Phase emoji.
 
-## Page Link
+## How to Use
 
-[Astrology Birthday Report](https://fiddle-leaf.github.io/astro-birth-day/)
+Visit [Astrology Birthday Report](https://fiddle-leaf.github.io/astro-birth-day/) to input details :')
 
 ## Bugs
 
