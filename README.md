@@ -23,3 +23,4 @@ Module 2: React.js project that gets user birth date/time and location and fetch
 - Update API request to fetch for future dates in 2023 as well
 - Add tooltip feature to images (like icon and emoji)
 - Set component state to track already configured astrodata profiles (save as a list to render)
+- Add functionality to fetch Astrology birth chart details from birthdate/time and coordinates
