@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/astro-birth-day/static/css/main.6c107b9f.css",
-    "main.js": "/astro-birth-day/static/js/main.121495c4.js",
+    "main.css": "/astro-birth-day/static/css/main.ac9457ac.css",
+    "main.js": "/astro-birth-day/static/js/main.67739997.js",
     "static/js/787.c45ee7f8.chunk.js": "/astro-birth-day/static/js/787.c45ee7f8.chunk.js",
     "index.html": "/astro-birth-day/index.html",
-    "main.6c107b9f.css.map": "/astro-birth-day/static/css/main.6c107b9f.css.map",
-    "main.121495c4.js.map": "/astro-birth-day/static/js/main.121495c4.js.map",
+    "main.ac9457ac.css.map": "/astro-birth-day/static/css/main.ac9457ac.css.map",
+    "main.67739997.js.map": "/astro-birth-day/static/js/main.67739997.js.map",
     "787.c45ee7f8.chunk.js.map": "/astro-birth-day/static/js/787.c45ee7f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c107b9f.css",
-    "static/js/main.121495c4.js"
+    "static/css/main.ac9457ac.css",
+    "static/js/main.67739997.js"
   ]
 }
