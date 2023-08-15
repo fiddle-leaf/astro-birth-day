@@ -47,12 +47,12 @@ export default function AstroView({ dispatch }) {
     <article>
       <output>
         <h2 className="username">{newUser.name}</h2>
-        <div className="location">
-          <div>
+        <div className="user-info">
+          <div className="birthday">
             <h5>Birthday</h5>
             {newUser.birthday.toLocaleString()}
           </div>
-          <div>
+          <div className="location">
             <h5>Location</h5>
             {newUser.location}
           </div>
