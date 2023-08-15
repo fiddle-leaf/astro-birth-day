@@ -12,3 +12,4 @@ Module 2: React.js project that gets user birth date/time and location and fetch
 - HTML/CSS5([Sass](https://sass-lang.com/))
 - [Catpaw](https://giphy.com/catpaw) gif from Giphy.
 - [Weather API](https://www.weatherapi.com/) fetches forecast and moonphase information.
+- [Unicode Emoji](https://github.com/julien-marcou/unicode-emoji) grabs Moon Phase emoji.
