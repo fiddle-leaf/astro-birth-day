@@ -14,6 +14,8 @@ export default function AstroView({ dispatch }) {
   const info = useSelector(selectInfo);
   const [users, setUsers] = useState([]);
 
+  console.log(info);
+
   let moonEmoji = unicodeEmoji
     .getEmojisGroupedBy("category")
     ["animals-nature"].filter(({ keywords }) => {
@@ -24,6 +26,7 @@ export default function AstroView({ dispatch }) {
   const newUser = user({
     name: info.user.name,
     location: `${info.data.location.name}, ${info.data.location.region}, ${info.data.location.country}`,
+    coordinates: { lat: info.data.location.lat, lon: info.data.location.lon },
     birthday: info.user.birthdate,
     forecast: info.data.forecast.forecastday[0].day,
     astro: info.data.forecast.forecastday[0].astro,
@@ -37,11 +40,13 @@ export default function AstroView({ dispatch }) {
 
   //console.log(location);
 
-  moonphase = moonphase[0];
+  newUser.moonphase = moonphase[0];
+
+  console.log(newUser);
 
   return (
     <article>
-      <ForecastView />
+      <ForecastView user={newUser}/>
       <div>
         <button type="reset" onClick={() => dispatch(setStatus("idle"))}>
           Reset

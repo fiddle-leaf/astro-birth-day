@@ -7,7 +7,6 @@ import "./astroviews.sass";
 
 export default function AstroInfo({ status }) {
   const dispatch = useDispatch();
-  console.log(status);
 
   return (
     <main className="astro-page">
