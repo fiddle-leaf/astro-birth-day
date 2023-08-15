@@ -13,6 +13,7 @@ const user = (state) => {
 export default function AstroView({ dispatch }) {
   const info = useSelector(selectInfo);
   const [users, setUsers] = useState([]);
+  let birthday = new Date(info.user.birthdate);
 
   console.log(info);
 
@@ -27,7 +28,7 @@ export default function AstroView({ dispatch }) {
     name: info.user.name,
     location: `${info.data.location.name}, ${info.data.location.region}, ${info.data.location.country}`,
     coordinates: { lat: info.data.location.lat, lon: info.data.location.lon },
-    birthday: info.user.birthdate,
+    birthday: birthday,
     forecast: info.data.forecast.forecastday[0].day,
     astro: info.data.forecast.forecastday[0].astro,
   });
@@ -42,25 +43,26 @@ export default function AstroView({ dispatch }) {
 
   newUser.moonphase = moonphase[0];
 
-  console.log(newUser);
-
   return (
     <article>
       <output>
-        <h2 id="username">{user.name}</h2>
-        <div id="location">
-          <p>
-            <strong>Birthday: </strong>
-            {Date(user.birthday).toLocaleString()}
-          </p>
-          <p>
-            <strong>Location: </strong>
-            {user.location}
-          </p>
+        <h2 className="username">{newUser.name}</h2>
+        <div className="location">
+          <div>
+            <h5>Birthday</h5>
+            {newUser.birthday.toLocaleString()}
+          </div>
+          <div>
+            <h5>Location</h5>
+            {newUser.location}
+          </div>
         </div>
-        <div id="forecast">
-          <Forecast forecast={user.forecast} astro={user.astro} />
-          <MoonData astro={user.astro} moonphase={user.moonphase} />
+        <button type="reset" onClick={() => dispatch(setStatus("idle"))}>
+          Reset
+        </button>
+        <div className="forecast">
+          <Forecast forecast={newUser.forecast} astro={newUser.astro} />
+          <MoonData astro={newUser.astro} moonphase={newUser.moonphase} />
         </div>
       </output>
     </article>

@@ -1,12 +1,19 @@
 export default function Forecast({ forecast, astro }) {
   return (
-    <div>
-      <h2>Forecast</h2>
-      <img src={forecast.condition.icon} alt="Forecast emoji"></img>
-      <h3>
-        {forecast.avgtemp_f.toFixed(0)}°F / {forecast.avgtemp_c.toFixed(0)}°C
-      </h3>
-      <h4>{forecast.condition.text}</h4>
+    <div className="forecast-day">
+      <h3>Forecast</h3>
+      <div className="desc">
+        <figure className="icon">
+          <img src={forecast.condition.icon} alt="Forecast emoji"></img>
+        </figure>
+        <div>
+          <h4>
+            {forecast.avgtemp_f.toFixed(0)}°F / {forecast.avgtemp_c.toFixed(0)}
+            °C
+          </h4>
+          <h5>{forecast.condition.text}</h5>
+        </div>
+      </div>
       <ul>
         <li>Humidity: {forecast.avghumidity}%</li>
         <li>UV Index: {forecast.uv}</li>
