@@ -39,7 +39,7 @@ export default function AstroForm({ setInfo, location, dispatch }) {
           ></input>
         </div>
         <div>
-          <label>Birth Date and Time</label>
+          <label>Enter Birth Date and Time</label>
           <input
             type="datetime-local"
             name="birthdate"
@@ -49,17 +49,17 @@ export default function AstroForm({ setInfo, location, dispatch }) {
           ></input>
         </div>
         <div>
-          <label>Birth Location</label>
+          <label>Enter Birth Location</label>
           <input
             type="text"
             name="location"
             id="location"
             onChange={handleChange}
             value={data.location}
-            placeholder="City, State, Country"
+            placeholder="City, State, or Country"
           ></input>
         </div>
-        <div id="buttons">
+        <span className="buttons">
           <button type="button" onClick={handleClick}>
             Enter
           </button>
@@ -69,7 +69,7 @@ export default function AstroForm({ setInfo, location, dispatch }) {
           >
             Reset
           </button>
-        </div>
+        </span>
       </form>
     </article>
   );

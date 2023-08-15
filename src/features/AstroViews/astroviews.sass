@@ -7,12 +7,21 @@ code
     padding: 0.2em
 
 .astro-form
+
     div
         display: grid
         grid-template-rows: 1fr
+        padding-block: calc(1rem/4)
 
         label
-            padding-block: 1rem
+            padding-block: calc(1rem/2)
+
+        input
+            font-size: 1rem
+            line-height: 150%
+
+    span.buttons>button
+            margin-inline-end: calc(1rem/4)
 
 .forecast,
 .desc,
