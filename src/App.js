@@ -34,6 +34,12 @@ function App() {
           </a>{" "}
           &copy; 2023.
         </p>
+        <p>
+          Powered by{" "}
+          <a href="https://www.weatherapi.com/" title="Free Weather API">
+            WeatherAPI.com
+          </a>
+        </p>
       </footer>
     </div>
   );

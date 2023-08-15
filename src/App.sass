@@ -48,7 +48,8 @@ h6
 label
   @extend .titles
 
-.App
+.App,
+footer
   @extend .flex
 
 .App
@@ -63,3 +64,13 @@ label
   header,
   footer
     flex: 0
+
+  footer
+    flex-flow: row wrap
+    justify-content: center
+    gap: calc(1rem/2)
+    padding-block: 1rem
+
+    p
+      margin-block: 0
+      font-size: 0.9rem

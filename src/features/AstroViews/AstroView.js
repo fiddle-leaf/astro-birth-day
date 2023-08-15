@@ -23,6 +23,11 @@ export default function AstroView({ dispatch }) {
       return keywords.includes("moon");
     });
 
+  let forecastEmoji =
+    unicodeEmoji.getEmojisGroupedBy("subgroup")["sky-weather"];
+
+  console.log(forecastEmoji);
+
   //extract data from info
   const newUser = user({
     name: info.user.name,
