@@ -11,7 +11,12 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1 className="page-title">Astrology Birthday Report</h1>
+        <h1 className="page-title">
+          Astrology
+          <br />
+          Birthday <br />
+          Report
+        </h1>
         {status === "idle" && (
           <p>
             A landing page for astrology and weather information for your 2023

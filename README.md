@@ -13,3 +13,12 @@ Module 2: React.js project that gets user birth date/time and location and fetch
 - [Catpaw](https://giphy.com/catpaw) gif from Giphy.
 - [Weather API](https://www.weatherapi.com/) fetches forecast and moonphase information.
 - [Unicode Emoji](https://github.com/julien-marcou/unicode-emoji) grabs Moon Phase emoji.
+
+## Page Link
+
+[Astrology Birthday Report](https://fiddle-leaf.github.io/astro-birth-day/)
+
+## Bugs
+
+- Update API request to fetch for future dates in 2023 as well
+- Add tooltip feature to images (like icon and emoji)
