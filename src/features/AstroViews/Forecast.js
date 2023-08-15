@@ -1,14 +1,18 @@
-export default function Forecast({ data, location }) {
-  console.log(data.condition.icon);
+export default function Forecast({ forecast, astro }) {
   return (
     <div>
-      <h3>Forecast</h3>
-      <img src={data.condition.icon} alt="weather icon"></img>
-      <h4>
-        {Math.floor(data.avgtemp_f)}°F/{Math.floor(data.avgtemp_c)}°C
-        <br /> <i>{data.condition.text}</i> <br />
-        {location.name}, {location.region}, {location.country}
-      </h4>
+      <h2>Forecast</h2>
+      <img src={forecast.condition.icon} alt="Forecast emoji"></img>
+      <h3>
+        {forecast.avgtemp_f.toFixed(0)}°F / {forecast.avgtemp_c.toFixed(0)}°C
+      </h3>
+      <h4>{forecast.condition.text}</h4>
+      <ul>
+        <li>Humidity: {forecast.avghumidity}%</li>
+        <li>UV Index: {forecast.uv}</li>
+        <li>Sunrise: {astro.sunrise}</li>
+        <li>Sunset : {astro.sunset}</li>
+      </ul>
     </div>
   );
 }

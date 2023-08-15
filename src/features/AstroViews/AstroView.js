@@ -1,10 +1,10 @@
 import "react-loading-skeleton/dist/skeleton.css";
 import * as unicodeEmoji from "unicode-emoji";
-import Emoji from "./Emoji";
 import { selectInfo, setStatus } from "../info/infoSlice";
 import { useSelector } from "react-redux";
-import ForecastView from "./ForecastView";
 import { useState } from "react";
+import Forecast from "./Forecast";
+import MoonData from "./MoonData";
 
 const user = (state) => {
   return Object.assign({}, state);
@@ -46,12 +46,23 @@ export default function AstroView({ dispatch }) {
 
   return (
     <article>
-      <ForecastView user={newUser}/>
-      <div>
-        <button type="reset" onClick={() => dispatch(setStatus("idle"))}>
-          Reset
-        </button>
-      </div>
+      <output>
+        <h2 id="username">{user.name}</h2>
+        <div id="location">
+          <p>
+            <strong>Birthday: </strong>
+            {Date(user.birthday).toLocaleString()}
+          </p>
+          <p>
+            <strong>Location: </strong>
+            {user.location}
+          </p>
+        </div>
+        <div id="forecast">
+          <Forecast forecast={user.forecast} astro={user.astro} />
+          <MoonData astro={user.astro} moonphase={user.moonphase} />
+        </div>
+      </output>
     </article>
   );
 }
