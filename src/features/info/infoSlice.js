@@ -6,6 +6,8 @@ const initialState = {
   status: "idle", //finite states
 };
 
+const today = Date.now();
+
 //location Async from input
 
 //moonphase Async from birthdate
@@ -14,7 +16,7 @@ export const locationAsync = createAsyncThunk(
   async (info) => {
     const location = info.location.split(",").join("%20");
     const datetime = info.birthdate.split("T");
-    console.log(datetime);
+    console.log(datetime > today);
     const apiKey = "61cbd6e17eaa421db1f62842231108";
 
     const url = `https://api.weatherapi.com/v1/history.json?&key=${apiKey}&q=${location}&dt=${datetime[0]}`;
