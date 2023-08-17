@@ -28,4 +28,4 @@ Visit [Astrology Birthday Report](https://fiddle-leaf.github.io/astro-birth-day/
 
 ## Limitations
 
-- Historic forecast from API only fetches data from Jan 2010 (history requests) through 300 days (future requests) from today's date.
+- Forecast from API only fetches data from Jan 2010 (history requests) through 300 days (future requests) from today's date.
