@@ -13,7 +13,7 @@ const user = (state) => {
 export default function AstroView({ dispatch }) {
   const info = useSelector(selectInfo);
   //const [users, setUsers] = useState([]);
-  let birthday = new Date(info.user.birthdate);
+  const birthday = new Date(info.user.birthdate);
 
   console.log(info);
 

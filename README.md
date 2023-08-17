@@ -20,8 +20,12 @@ Visit [Astrology Birthday Report](https://fiddle-leaf.github.io/astro-birth-day/
 
 ## Bugs
 
-- Update API request to fetch for future dates in 2023 as well
+- ~~Update API request to fetch for future dates in 2023 as well~~
 - Add tooltip feature to images (like icon and emoji)
 - Set component state to track already configured astrodata profiles (save as a list to render)
 - Add functionality to fetch Astrology birth chart details from birthdate/time and coordinates
 - Bold and fix bullets for forecast descriptions
+
+## Limitations
+
+- Historic forecast from API only fetches data from Jan 2010 (history requests) through 300 days (future requests) from today's date.

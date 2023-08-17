@@ -15,11 +15,15 @@ export const locationAsync = createAsyncThunk(
   "info/fetchLocation",
   async (info) => {
     const location = info.location.split(",").join("%20");
-    const datetime = info.birthdate.split("T");
-    console.log(datetime > today);
+    const birthday = info.birthdate.split("T")[0];
+    const datetime = new Date(info.birthdate);
+
+    const time = datetime > today ? "future" : "history";
+
+    console.log(time > today, time);
     const apiKey = "61cbd6e17eaa421db1f62842231108";
 
-    const url = `https://api.weatherapi.com/v1/history.json?&key=${apiKey}&q=${location}&dt=${datetime[0]}`;
+    const url = `https://api.weatherapi.com/v1/${time}.json?&key=${apiKey}&q=${location}&dt=${birthday}`;
 
     const options = {
       method: "GET",
