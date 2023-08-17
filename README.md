@@ -8,7 +8,7 @@ Module 2: React.js project that gets user birth date/time and location and fetch
 
 ## Technologies Used
 
-- [React.js](https://react.dev/) & [Redux.js](https://redux.js.org/),
+- [React.js](https://react.dev/) & [Redux.js](https://redux.js.org/)
 - HTML/CSS5([Sass](https://sass-lang.com/))
 - [Catpaw](https://giphy.com/catpaw) gif from Giphy.
 - [Weather API](https://www.weatherapi.com/) fetches forecast and moonphase information.
