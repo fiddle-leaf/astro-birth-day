@@ -26,6 +26,6 @@ Visit [Astrology Birthday Report](https://fiddle-leaf.github.io/astro-birth-day/
 - Add functionality to fetch Astrology birth chart details from birthdate/time and coordinates
 - Bold and fix bullets for forecast descriptions
 
-## Limitations
+### Limitations
 
 - Forecast from API only fetches data from Jan 2010 (history requests) through 300 days (future requests) from today's date.
