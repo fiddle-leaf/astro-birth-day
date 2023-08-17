@@ -6,7 +6,13 @@ const initialState = {
   status: "idle", //finite states
 };
 
-const today = Date.now();
+const today = new Date();
+
+//API future request accepts date 14-300 days from today
+const two_weeks_date = new Date();
+two_weeks_date.setDate(today.getDate() + 14);
+let two_weeks = new Date(two_weeks_date);
+console.log(two_weeks_date);
 
 //location Async from input
 
@@ -18,9 +24,15 @@ export const locationAsync = createAsyncThunk(
     const birthday = info.birthdate.split("T")[0];
     const datetime = new Date(info.birthdate);
 
-    const time = datetime > today ? "future" : "history";
+    let time =
+      datetime > two_weeks
+        ? "future"
+        : datetime < two_weeks && datetime > today
+        ? "forecast"
+        : "history";
 
-    console.log(time > today, time);
+    console.log(time, today, two_weeks, datetime);
+
     const apiKey = "61cbd6e17eaa421db1f62842231108";
 
     const url = `https://api.weatherapi.com/v1/${time}.json?&key=${apiKey}&q=${location}&dt=${birthday}`;
